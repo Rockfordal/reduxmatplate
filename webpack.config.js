@@ -1,7 +1,7 @@
 module.exports = {
   context: __dirname + "/src",
   entry: {
-    jsx: "./index.jsx",
+    jsx: "./main.jsx",
     css: "./main.css",
     html: "./index.html",
   },
@@ -10,6 +10,10 @@ module.exports = {
     path: __dirname + "/static",
     filename: "bundle.js",
   },
+    devServer: {
+        inline: true,
+        port: 3333
+    },
   module: {
     preLoaders: [
         //Eslint loader
